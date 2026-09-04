@@ -3,3 +3,4 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/Isaac/Minescape/Content/Flag.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/Flag.xnb","TextureProcessor","Texture2DContent",1467,49237,0.1218212
 "C:/Users/Isaac/Minescape/Content/Mine.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/Mine.xnb","TextureProcessor","Texture2DContent",1581,16469,0.003335
 "C:/Users/Isaac/Minescape/Content/slime.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/slime.xnb","TextureProcessor","Texture2DContent",7682,77909,0.004488
+"C:/Users/Isaac/Minescape/Content/Submarine.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/Submarine.xnb","TextureProcessor","Texture2DContent",594,4181,0.1082031

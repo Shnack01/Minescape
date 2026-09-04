@@ -29,8 +29,9 @@ public class MinescapeGame : Game
     /// </summary>
     protected override void Initialize()
     {
-        // TODO: Add your initialization logic here
+       
         System.Random rand = new System.Random();
+        //makes mines and adds them randomly to the map
         mines = new MineSprite[]
         {
             new MineSprite(new Vector2((float)rand.NextDouble() * GraphicsDevice.Viewport.Width, (float)rand.NextDouble() * GraphicsDevice.Viewport.Height)),
@@ -67,8 +68,6 @@ public class MinescapeGame : Game
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
-
-        // TODO: use this.Content to load your game content here
         foreach (var coin in mines) coin.LoadContent(Content);
         slimeGhost.LoadContent(Content);
         flagSprite.LoadContent(Content);
@@ -83,34 +82,32 @@ public class MinescapeGame : Game
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-
-        // TODO: Add your update logic here
         slimeGhost.Update(gameTime);
         slimeGhost.Color = Color.White;
         //Detect and process collisions
-        foreach(var coin in mines)
+        foreach(var mine in mines)
         {
-            if(!coin.Collected &&  coin.Bounds.CollidesWith(slimeGhost.Bounds))
+            if(!mine.Collected &&  mine.Bounds.CollidesWith(slimeGhost.Bounds))
             {
                 slimeGhost.Color = Color.Red;
-                coin.Collected = true;
-                slimeGhost.Health--;
+                //mine.Collected = true;
+                //slimeGhost.Health--;
                 if(slimeGhost.Health == 0)
                 {
                     slimeGhost.Explode();
                 }
             }
-            if (coin.SightBounds.CollidesWith(slimeGhost.Bounds))
+            if (mine.SightBounds.CollidesWith(slimeGhost.Bounds))
             {
-                slimeGhost.Color = Color.Blue;
-                coin.Position += (slimeGhost.Posision - coin.Position)/50;
+                //slimeGhost.Color = Color.Blue;
+                //mine.Position += (slimeGhost.Posision - mine.Position)/50;
             }
             
         }
         if(flagSprite.Bounds.CollidesWith(slimeGhost.Bounds))
         {
             slimeGhost.Color = Color.Yellow;
-            foreach(var coin in mines) coin.Collected = true;
+            foreach(var mine in mines) mine.Collected = true;
         }
 
         base.Update(gameTime);
@@ -123,8 +120,6 @@ public class MinescapeGame : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
-        // TODO: Add your drawing code here
         spriteBatch.Begin();
         foreach (var mine in mines) mine.Draw(gameTime, spriteBatch);
         slimeGhost.Draw(gameTime, spriteBatch);

@@ -38,3 +38,5 @@ C:\Users\Isaac\Minescape\obj\Debug\net9.0\Minescape.pdb
 C:\Users\Isaac\Minescape\obj\Debug\net9.0\Minescape.genruntimeconfig.cache
 C:\Users\Isaac\Minescape\obj\Debug\net9.0\ref\Minescape.dll
 C:\Users\Isaac\Minescape\bin\Debug\net9.0\Content\arial.xnb
+C:\Users\Isaac\Minescape\bin\Debug\net9.0\Content\Submarine.xnb
+C:\Users\Isaac\Minescape\obj\Debug\net9.0\Minescape.sourcelink.json

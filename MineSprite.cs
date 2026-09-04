@@ -24,8 +24,8 @@ namespace Minescape
             set
             {
                 position = value;
-                bounds.Center = position + new Vector2(8, 8);
-                sightBounds.Center = position + new Vector2(8, 8);
+                bounds.Center = position;
+                sightBounds.Center = position;
             }
         }
 
@@ -48,8 +48,8 @@ namespace Minescape
         /// <param name="position">The position of the sprite in the game</param>
         public MineSprite(Vector2 position)
         {
-            this.bounds = new BoundingCircle(Position + new Vector2(8,8) , 8);
-            this.sightBounds = new BoundingCircle(Position + new Vector2(8,8), 8 * 5);
+            this.bounds = new BoundingCircle(position, 9);
+            this.sightBounds = new BoundingCircle(position, 16 * 6);
             this.Position = position;
         }
 
@@ -80,7 +80,7 @@ namespace Minescape
             }
 
             var source = new Rectangle(animationFrame * 32, 0, 32, 32);
-            spriteBatch.Draw(texture, Position, source, Color.White);
+            spriteBatch.Draw(texture, Position, source, Color.White, 0f, new Vector2(16, 16), 1f, SpriteEffects.None, 0f);
         }
     }
 }

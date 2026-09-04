@@ -24,7 +24,7 @@ namespace Minescape
 
         private bool flipped;
 
-        private BoundingRectangle bounds = new BoundingRectangle(new Vector2(200-16,200-16), 32, 32);
+        private BoundingRectangle bounds = new BoundingRectangle(new Vector2(200 - 20, 200 - 10), 40, 20);
 
         public BoundingRectangle Bounds => bounds;
         /// <summary>
@@ -38,7 +38,7 @@ namespace Minescape
         /// <param name="content">The ContentManager to load with</param>
         public void LoadContent(ContentManager content)
         {
-            texture = content.Load<Texture2D>("slime");
+            texture = content.Load<Texture2D>("Submarine");
         }
 
         /// <summary>
@@ -69,8 +69,8 @@ namespace Minescape
                 flipped = false;
             }
             //update the bounds
-            bounds.X = position.X - 16;
-            bounds.Y = position.Y - 16;
+            bounds.X = position.X - 20;
+            bounds.Y = position.Y - 10;
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Minescape
         {
             if(!alive) return;
             SpriteEffects spriteEffects = (flipped) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-            spriteBatch.Draw(texture, position, null, Color, 0, new Vector2(64, 64), 0.25f, spriteEffects, 0);
+            spriteBatch.Draw(texture, position, null, Color, 0, new Vector2(16, 16), 1.25f, spriteEffects, 0);
         }
 
         public void Explode()

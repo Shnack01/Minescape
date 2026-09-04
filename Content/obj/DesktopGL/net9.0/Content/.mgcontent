@@ -8,8 +8,10 @@
     <File>C:/Users/Isaac/Minescape/Content/Flag.png</File>
     <File>C:/Users/Isaac/Minescape/Content/Mine.png</File>
     <File>C:/Users/Isaac/Minescape/Content/slime.png</File>
+    <File>C:/Users/Isaac/Minescape/Content/Submarine.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
