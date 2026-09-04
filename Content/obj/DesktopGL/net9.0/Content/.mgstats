@@ -1,6 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/User/source/repos/Minescape/Content/arial.spritefont","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/arial.xnb","FontDescriptionProcessor","SpriteFontContent",2068,70681,0.3015657
-"C:/Users/User/source/repos/Minescape/Content/Flag.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Flag.xnb","TextureProcessor","Texture2DContent",1467,49237,0.0201421
-"C:/Users/User/source/repos/Minescape/Content/Mine.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Mine.xnb","TextureProcessor","Texture2DContent",1581,16469,0.0084634
-"C:/Users/User/source/repos/Minescape/Content/slime.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/slime.xnb","TextureProcessor","Texture2DContent",7682,77909,0.0093349
-"C:/Users/User/source/repos/Minescape/Content/Submarine.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Submarine.xnb","TextureProcessor","Texture2DContent",594,4181,0.0060107
+"C:/Users/Isaac/Minescape/Content/arial.spritefont","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/arial.xnb","FontDescriptionProcessor","SpriteFontContent",2068,70681,0.2026046
+"C:/Users/Isaac/Minescape/Content/Flag.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/Flag.xnb","TextureProcessor","Texture2DContent",1467,49237,0.0167786
+"C:/Users/Isaac/Minescape/Content/Hammer.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/Hammer.xnb","TextureProcessor","Texture2DContent",474,4181,0.1079392
+"C:/Users/Isaac/Minescape/Content/Mine.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/Mine.xnb","TextureProcessor","Texture2DContent",1581,16469,0.0041067
+"C:/Users/Isaac/Minescape/Content/slime.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/slime.xnb","TextureProcessor","Texture2DContent",7682,77909,0.0130665
+"C:/Users/Isaac/Minescape/Content/Submarine.png","C:/Users/Isaac/Minescape/Content/bin/DesktopGL/Content/Submarine.xnb","TextureProcessor","Texture2DContent",594,4181,0.0036021

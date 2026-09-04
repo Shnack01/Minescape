@@ -31,6 +31,9 @@ namespace Minescape
 
         private Texture2D texture;
         private BoundingCircle sightBounds;
+        /// <summary>
+        /// The bounds of the light of sight for the mine
+        /// </summary>
         public BoundingCircle SightBounds => sightBounds;
 
         private BoundingCircle bounds;

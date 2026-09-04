@@ -82,3 +82,4 @@ C:\Users\User\source\repos\Minescape\obj\Debug\net9.0\refint\Minescape.dll
 C:\Users\User\source\repos\Minescape\obj\Debug\net9.0\Minescape.pdb
 C:\Users\User\source\repos\Minescape\obj\Debug\net9.0\Minescape.genruntimeconfig.cache
 C:\Users\User\source\repos\Minescape\obj\Debug\net9.0\ref\Minescape.dll
+C:\Users\Isaac\Minescape\bin\Debug\net9.0\Content\Hammer.xnb

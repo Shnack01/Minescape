@@ -27,6 +27,11 @@ namespace Minescape
         private BoundingRectangle bounds = new BoundingRectangle(new Vector2(200 - 20, 200 - 10), 40, 20);
 
         public BoundingRectangle Bounds => bounds;
+
+        private  BoundingCircle despawnBounds = new BoundingCircle(new Vector2(200 - 20, 200 - 10), 70);
+        public BoundingCircle DespawnBounds => despawnBounds;
+
+        public bool DoneWithBound = false;
         /// <summary>
         /// The color to blend with the ghost
         /// </summary>

@@ -4,13 +4,15 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/User/source/repos/Minescape/Content/arial.spritefont</File>
-    <File>C:/Users/User/source/repos/Minescape/Content/Flag.png</File>
-    <File>C:/Users/User/source/repos/Minescape/Content/Mine.png</File>
-    <File>C:/Users/User/source/repos/Minescape/Content/slime.png</File>
-    <File>C:/Users/User/source/repos/Minescape/Content/Submarine.png</File>
+    <File>C:/Users/Isaac/Minescape/Content/arial.spritefont</File>
+    <File>C:/Users/Isaac/Minescape/Content/Flag.png</File>
+    <File>C:/Users/Isaac/Minescape/Content/Hammer.png</File>
+    <File>C:/Users/Isaac/Minescape/Content/Mine.png</File>
+    <File>C:/Users/Isaac/Minescape/Content/slime.png</File>
+    <File>C:/Users/Isaac/Minescape/Content/Submarine.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
