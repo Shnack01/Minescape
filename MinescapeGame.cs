@@ -16,6 +16,7 @@ public class MinescapeGame : Game
     private SubSprite sub;
     private SpriteFont spriteFont;
     private FlagSprite flagSprite;
+    private HammerSprite hammerSprite;
 
     /// <summary>
     /// A game demonstrating collision detection
@@ -61,7 +62,7 @@ public class MinescapeGame : Game
         };
         sub = new SubSprite();
         flagSprite = new FlagSprite(new Vector2((float)rand.NextDouble() * (GraphicsDevice.Viewport.Width - 100), (float)rand.NextDouble() * (GraphicsDevice.Viewport.Height - 100)));
-
+        hammerSprite = new HammerSprite(new Vector2((float)rand.NextDouble() * (GraphicsDevice.Viewport.Width - 100), (float)rand.NextDouble() * (GraphicsDevice.Viewport.Height - 100)));
         base.Initialize();
     }
 
@@ -74,6 +75,7 @@ public class MinescapeGame : Game
         foreach (var coin in mines) coin.LoadContent(Content);
         sub.LoadContent(Content);
         flagSprite.LoadContent(Content);
+        hammerSprite.LoadContent(Content);
         spriteFont = Content.Load<SpriteFont>("arial");
     }
 
@@ -90,9 +92,14 @@ public class MinescapeGame : Game
         //Detect and process collisions
         foreach(var mine in mines)
         {
+            //get rid of mines that are at the location of the sub spawn
+            if(!sub.DoneWithBound && mine.Bounds.CollidesWith(sub.DespawnBounds))
+            {
+                mine.Collected = true;
+            }
+            //Checks to see if the mine has hit the sub
             if(!mine.Collected &&  mine.Bounds.CollidesWith(sub.Bounds))
             {
-                //slimeGhost.Color = Color.Red;
                 mine.Collected = true;
                 sub.Health--;
                 if(sub.Health == 0)
@@ -102,19 +109,26 @@ public class MinescapeGame : Game
                     gameLost = true;
                 }
             }
+            //Checks to see if the Sub is within the sight bounds of the mine
             if (mine.SightBounds.CollidesWith(sub.Bounds))
             {
-                //slimeGhost.Color = Color.Blue;
                 mine.Position += (sub.Posision - mine.Position)/50;
 
             }
             
         }
+        sub.DoneWithBound = true;
+        //Checks to see if the flag has been hit
         if(flagSprite.Bounds.CollidesWith(sub.Bounds))
         {
-            //slimeGhost.Color = Color.Yellow;
             foreach(var mine in mines) mine.Collected = true;
             gameWon = true;
+        }
+        //Checks to see if the hammer has been hit
+        if (hammerSprite.Bounds.CollidesWith(sub.Bounds) && !hammerSprite.Collected)
+        {
+            hammerSprite.Collected = true;
+            sub.Health++;
         }
 
         base.Update(gameTime);
@@ -131,7 +145,9 @@ public class MinescapeGame : Game
         foreach (var mine in mines) mine.Draw(gameTime, spriteBatch);
         sub.Draw(gameTime, spriteBatch);
         flagSprite.Draw(gameTime, spriteBatch);
+        hammerSprite.Draw(gameTime, spriteBatch);
         spriteBatch.DrawString(spriteFont, $"Ship Health: {sub.Health}", new Vector2(2,2), Color.Gold);
+        
         spriteBatch.DrawString(spriteFont, "Reach The Flag to Win", new Vector2(450,2), Color.Gold);
         if(gameLost) spriteBatch.DrawString(spriteFont, "You Lost.", new Vector2(325,200), Color.Gold);
         if(gameWon) spriteBatch.DrawString(spriteFont, "You Win!!!", new Vector2(320, 200), Color.Gold);

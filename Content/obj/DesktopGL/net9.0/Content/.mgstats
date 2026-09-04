@@ -1,6 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/User/source/repos/Minescape/Content/arial.spritefont","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/arial.xnb","FontDescriptionProcessor","SpriteFontContent",2068,70681,0.3015657
-"C:/Users/User/source/repos/Minescape/Content/Flag.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Flag.xnb","TextureProcessor","Texture2DContent",1467,49237,0.0201421
-"C:/Users/User/source/repos/Minescape/Content/Mine.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Mine.xnb","TextureProcessor","Texture2DContent",1581,16469,0.0084634
-"C:/Users/User/source/repos/Minescape/Content/slime.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/slime.xnb","TextureProcessor","Texture2DContent",7682,77909,0.0093349
-"C:/Users/User/source/repos/Minescape/Content/Submarine.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Submarine.xnb","TextureProcessor","Texture2DContent",594,4181,0.0060107
+"C:/Users/User/source/repos/Minescape/Content/arial.spritefont","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/arial.xnb","FontDescriptionProcessor","SpriteFontContent",2068,70681,0.4084624
+"C:/Users/User/source/repos/Minescape/Content/Flag.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Flag.xnb","TextureProcessor","Texture2DContent",1467,49237,0.0334441
+"C:/Users/User/source/repos/Minescape/Content/Hammer.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Hammer.xnb","TextureProcessor","Texture2DContent",474,4181,0.0066168
+"C:/Users/User/source/repos/Minescape/Content/Mine.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Mine.xnb","TextureProcessor","Texture2DContent",1581,16469,0.0066649
+"C:/Users/User/source/repos/Minescape/Content/Submarine.png","C:/Users/User/source/repos/Minescape/Content/bin/DesktopGL/Content/Submarine.xnb","TextureProcessor","Texture2DContent",594,4181,0.0051388

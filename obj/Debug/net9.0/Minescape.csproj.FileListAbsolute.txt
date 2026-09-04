@@ -43,7 +43,6 @@ C:\Users\Isaac\Minescape\obj\Debug\net9.0\Minescape.sourcelink.json
 C:\Users\User\source\repos\Minescape\bin\Debug\net9.0\Content\arial.xnb
 C:\Users\User\source\repos\Minescape\bin\Debug\net9.0\Content\Flag.xnb
 C:\Users\User\source\repos\Minescape\bin\Debug\net9.0\Content\Mine.xnb
-C:\Users\User\source\repos\Minescape\bin\Debug\net9.0\Content\slime.xnb
 C:\Users\User\source\repos\Minescape\bin\Debug\net9.0\Content\Submarine.xnb
 C:\Users\User\source\repos\Minescape\bin\Debug\net9.0\Minescape.exe
 C:\Users\User\source\repos\Minescape\bin\Debug\net9.0\Minescape.deps.json
@@ -82,3 +81,5 @@ C:\Users\User\source\repos\Minescape\obj\Debug\net9.0\refint\Minescape.dll
 C:\Users\User\source\repos\Minescape\obj\Debug\net9.0\Minescape.pdb
 C:\Users\User\source\repos\Minescape\obj\Debug\net9.0\Minescape.genruntimeconfig.cache
 C:\Users\User\source\repos\Minescape\obj\Debug\net9.0\ref\Minescape.dll
+C:\Users\Isaac\Minescape\bin\Debug\net9.0\Content\Hammer.xnb
+C:\Users\User\source\repos\Minescape\bin\Debug\net9.0\Content\Hammer.xnb
