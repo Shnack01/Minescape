@@ -49,7 +49,7 @@ namespace Minescape
         public MineSprite(Vector2 position)
         {
             this.bounds = new BoundingCircle(position, 9);
-            this.sightBounds = new BoundingCircle(position, 16 * 6);
+            this.sightBounds = new BoundingCircle(position, 16 * 5);
             this.Position = position;
         }
 

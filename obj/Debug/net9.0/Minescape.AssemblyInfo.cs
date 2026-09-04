@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Minescape")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95c2c616b3f1989d8f9e66ab8fa72a000c869489")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6981e2d70dabf27ecceb620998d62b1cc846c32f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Minescape")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Minescape")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,9 +8,12 @@ public class MinescapeGame : Game
 {
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
+
+    private bool gameWon = false;
+    private bool gameLost = false;
     
     private MineSprite[] mines;
-    private SubSprite slimeGhost;
+    private SubSprite sub;
     private SpriteFont spriteFont;
     private FlagSprite flagSprite;
 
@@ -56,8 +59,8 @@ public class MinescapeGame : Game
             new MineSprite(new Vector2((float)rand.NextDouble() * GraphicsDevice.Viewport.Width, (float)rand.NextDouble() * GraphicsDevice.Viewport.Height)),
             new MineSprite(new Vector2((float)rand.NextDouble() * GraphicsDevice.Viewport.Width, (float)rand.NextDouble() * GraphicsDevice.Viewport.Height))
         };
-        slimeGhost = new SubSprite();
-        flagSprite = new FlagSprite(new Vector2((float)rand.NextDouble() * GraphicsDevice.Viewport.Width - 100, (float)rand.NextDouble() * GraphicsDevice.Viewport.Height - 100));
+        sub = new SubSprite();
+        flagSprite = new FlagSprite(new Vector2((float)rand.NextDouble() * (GraphicsDevice.Viewport.Width - 100), (float)rand.NextDouble() * (GraphicsDevice.Viewport.Height - 100)));
 
         base.Initialize();
     }
@@ -69,7 +72,7 @@ public class MinescapeGame : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
         foreach (var coin in mines) coin.LoadContent(Content);
-        slimeGhost.LoadContent(Content);
+        sub.LoadContent(Content);
         flagSprite.LoadContent(Content);
         spriteFont = Content.Load<SpriteFont>("arial");
     }
@@ -82,32 +85,36 @@ public class MinescapeGame : Game
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-        slimeGhost.Update(gameTime);
-        slimeGhost.Color = Color.White;
+        sub.Update(gameTime);
+        sub.Color = Color.White;
         //Detect and process collisions
         foreach(var mine in mines)
         {
-            if(!mine.Collected &&  mine.Bounds.CollidesWith(slimeGhost.Bounds))
+            if(!mine.Collected &&  mine.Bounds.CollidesWith(sub.Bounds))
             {
-                slimeGhost.Color = Color.Red;
-                //mine.Collected = true;
-                //slimeGhost.Health--;
-                if(slimeGhost.Health == 0)
+                //slimeGhost.Color = Color.Red;
+                mine.Collected = true;
+                sub.Health--;
+                if(sub.Health == 0)
                 {
-                    slimeGhost.Explode();
+                    sub.Explode();
+                    foreach(var minee in mines) minee.Collected = true;
+                    gameLost = true;
                 }
             }
-            if (mine.SightBounds.CollidesWith(slimeGhost.Bounds))
+            if (mine.SightBounds.CollidesWith(sub.Bounds))
             {
                 //slimeGhost.Color = Color.Blue;
-                //mine.Position += (slimeGhost.Posision - mine.Position)/50;
+                mine.Position += (sub.Posision - mine.Position)/50;
+
             }
             
         }
-        if(flagSprite.Bounds.CollidesWith(slimeGhost.Bounds))
+        if(flagSprite.Bounds.CollidesWith(sub.Bounds))
         {
-            slimeGhost.Color = Color.Yellow;
+            //slimeGhost.Color = Color.Yellow;
             foreach(var mine in mines) mine.Collected = true;
+            gameWon = true;
         }
 
         base.Update(gameTime);
@@ -122,12 +129,16 @@ public class MinescapeGame : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
         spriteBatch.Begin();
         foreach (var mine in mines) mine.Draw(gameTime, spriteBatch);
-        slimeGhost.Draw(gameTime, spriteBatch);
+        sub.Draw(gameTime, spriteBatch);
         flagSprite.Draw(gameTime, spriteBatch);
-        spriteBatch.DrawString(spriteFont, $"Ship Health: {slimeGhost.Health}", new Vector2(2,2), Color.Gold);
+        spriteBatch.DrawString(spriteFont, $"Ship Health: {sub.Health}", new Vector2(2,2), Color.Gold);
+        spriteBatch.DrawString(spriteFont, "Reach The Flag to Win", new Vector2(450,2), Color.Gold);
+        if(gameLost) spriteBatch.DrawString(spriteFont, "You Lost.", new Vector2(325,200), Color.Gold);
+        if(gameWon) spriteBatch.DrawString(spriteFont, "You Win!!!", new Vector2(320, 200), Color.Gold);
         spriteBatch.End();
 
         base.Draw(gameTime);
     }
-}}
+}
+}
 
